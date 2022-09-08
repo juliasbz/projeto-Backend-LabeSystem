@@ -1,0 +1,51 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Exercício 0
+GET http://localhost:3003/classrooms
+
+### Exercício 1
+POST http://localhost:3003/classrooms
+Content-Type: application/json
+
+{
+    "name": "Matemática",
+    "module": "2"
+}
+
+### Exercício 2
+GET http://localhost:3003/classrooms/active
+
+### Exercício 3
+PUT http://localhost:3003/classrooms/104/module
+Content-Type: application/json
+
+{
+    "module": "2"
+}
+
+### Exercício 4
+POST http://localhost:3003/students
+Content-Type: application/json
+
+{
+    "name": "Julia",
+    "email": "julia@gmail.com",
+    "birthdate": "1990/02/02",
+    "hobbies": ["Correr", "Ler"],
+    "classroomId": null
+}
+
+### Exercício 5
+GET http://localhost:3003/students?q=julia
+
+### Exercício 6
+PUT http://localhost:3003/students/201/classroom
+Content-Type: application/json
+
+{
+    "classroomId": "102"
+}
+
+### Exercício 7
+GET http://localhost:3003/classrooms/101/students
